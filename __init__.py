@@ -1,13 +1,13 @@
 bl_info = {
-    "name": "SwiftBlock",
-    "author": "Karl-Johan Nogenmyr, Mikko Folkersma, Turo Valikangas, Tuomo Keskitalo",
+    "name": "SwiftBlock, LSM modification",
+    "author": "Karl-Johan Nogenmyr, Mikko Folkersma, Turo Valikangas, Tuomo Keskitalo, Lourenco SM",
     "version": (0, 5),
     "blender": (2, 93, 0),
-    "location": "View_3D > Object > SwiftBlock",
+    "location": "View_3D > Object > SwiftBlock lsm",
     "description": "Creates OpenFOAM blockMeshDict block geometry definition file",
     "warning": "",
-    "wiki_url": "https://github.com/tkeskita/swiftBlock",
-    "tracker_url": "https://github.com/tkeskita/swiftBlock/issues",
+    "wiki_url": "https://github.com/lourencosm/swiftBlock_lsm",
+    "tracker_url": "https://github.com/lourencosm/swiftBlock_lsm/issues",
     "category": "OpenFOAM"}
 
 import bpy
@@ -169,8 +169,8 @@ bpy.types.Object.swiftBlock_edgegroup_index = bpy.props.IntProperty()
 class VIEW3D_PT_SwiftBlockPanel(bpy.types.Panel):
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
-    bl_category = "SwiftBlock"
-    bl_label = "SwiftBlock"
+    bl_category = "SwiftBlock lsm"
+    bl_label = "SwiftBlock lsm"
 
     def draw(self, context):
         ob = context.active_object
