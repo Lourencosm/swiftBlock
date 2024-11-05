@@ -643,7 +643,7 @@ def writeProjectionObjects(ob, path, onlyFaces = False):
         sob = bpy.data.objects[o]
         hide = sob.hide_get()
         blender_utils.activateObject(sob)
-        bpy.ops.export_mesh.stl(filepath = path + '/{}.stl'.format(o), use_selection=True)
+        bpy.ops.wm.stl_export(filepath = path + '/{}.stl'.format(o), export_selected_objects=True) # LSM modification prior: #bpy.ops.export_mesh.stl(filepath = path + '/{}.stl'.format(o), use_selection=True)
         sob.hide_set(hide)
     blender_utils.activateObject(ob)
     return objects
