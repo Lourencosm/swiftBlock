@@ -523,7 +523,11 @@ class SWIFTBLOCK_OT_BuildBlocking(bpy.types.Operator):
         # A bug in face_info when there are o-grids. The block indices after o-grid block have to be decreased by one.
         replace_ids = dict()
         block_ids = []
+        print('SLB')
+        print(face_info.keys())
         for key in face_info.keys():
+            #LSM add
+            print(key)
             block_ids.extend(face_info[key]['pos'])
             block_ids.extend(face_info[key]['neg'])
         block_ids = sorted(set(block_ids))
